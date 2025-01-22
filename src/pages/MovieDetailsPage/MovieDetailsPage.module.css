@@ -1,0 +1,32 @@
+.containerDetailsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px auto;
+    max-width: 1000px;
+    padding: 10px;
+
+}
+
+.moviePoster {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    min-width: 140px;
+    box-shadow: 0 4px 8px #0003;
+    margin-bottom: 10px;
+}
+
+.navDetailsPage {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.pDetailsPage {
+    text-align: center;
+}

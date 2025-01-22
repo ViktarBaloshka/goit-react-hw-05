@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import fetchTrendingMovies from "../../services/api";
 import MovieList from "../../components/MovieList/MovieList";
+import clsx from "clsx";
+import s from "./HomePage.module.css";
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -13,8 +15,9 @@ export default function HomePage() {
     getDataMovies();
   }, []);
   return (
-    <div>
+    <>
+      <h2 className={clsx(s.titleHomePage)}>Trending today</h2>
       <MovieList movies={movies} />
-    </div>
+    </>
   );
 }
