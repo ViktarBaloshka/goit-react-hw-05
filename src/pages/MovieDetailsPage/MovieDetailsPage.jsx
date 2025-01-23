@@ -1,5 +1,11 @@
 import { useEffect, useState, useRef } from "react";
-import { useLocation, useParams, Outlet, NavLink } from "react-router-dom";
+import {
+  useLocation,
+  useParams,
+  Outlet,
+  NavLink,
+  Link,
+} from "react-router-dom";
 import { fetchMoviesById, BASE_URL_IMAGE } from "../../services/api";
 import clsx from "clsx";
 import s from "./MovieDetailsPage.module.css";
@@ -26,9 +32,9 @@ export default function MovieDetailsPage() {
 
   return (
     <div className={clsx(s.containerDetailsPage)}>
-      <NavLink to={goBackRef.current} state={location}>
+      <Link to={goBackRef.current} state={location}>
         Go back
-      </NavLink>
+      </Link>
 
       <h2>{moviesDetailsPage.title}</h2>
       <img
@@ -38,10 +44,11 @@ export default function MovieDetailsPage() {
       />
       <div>
         <p className={clsx(s.pDetailsPage)}>
-          Rating: {moviesDetailsPage.vote_average.toFixed(2)}
+          <strong>Rating:</strong> {moviesDetailsPage.vote_average.toFixed(2)}
         </p>
         <p className={clsx(s.pDetailsPage)}>
-          Duration: {moviesDetailsPage.runtime} m.
+          <strong>Duration: </strong>
+          {moviesDetailsPage.runtime} m.
         </p>
         <h3>Overview</h3>
         <p>{moviesDetailsPage.overview}</p>

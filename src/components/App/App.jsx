@@ -16,14 +16,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
-        <Route path="/movies/:moviesId" element={<MoviesDetailsPage />} />
-        {/* <Route path="/movies/:movieId/cast" element={<MovieCast />}>
-            <Route
-              path="/movies/:movieId/reviews"
-              element={<MovieReviews />}
-            ></Route>
-          </Route>
-        </Route> */}
+        <Route path="/movies/:moviesId" element={<MoviesDetailsPage />}>
+          <Route path="cast" element={<MovieCast />} />
+          <Route path="reviews" element={<MovieReviews />} />
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>

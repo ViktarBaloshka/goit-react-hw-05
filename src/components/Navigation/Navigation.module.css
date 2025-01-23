@@ -1,25 +1,29 @@
-.link {
-    color: #000000;
-    font-size: 26px;
-    text-decoration: none;
-
-    &:hover {
-        color: tomato;
-        transition: all 0.4s ease-in-out;
-    }
-}
-
 .nav {
     display: flex;
     gap: 20px;
     justify-content: center;
-    padding: 20px 0;
-    margin: 0;
-    border-bottom: 2px solid #000000;
-    font-weight: bold;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover {
+    color: #0056b3;
+    transform: scale(1.05);
 }
 
 .active {
-    color: tomato;
+    font-weight: bold;
+    color: #0056b3;
     text-decoration: underline;
 }

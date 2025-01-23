@@ -14,6 +14,7 @@ export default function HomePage() {
     };
     getDataMovies();
   }, []);
+  if (!movies) return <p>Loading...</p>;
   return (
     <>
       <h2 className={clsx(s.titleHomePage)}>Trending today</h2>

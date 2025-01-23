@@ -18,7 +18,30 @@ export default async function fetchTrendingMovies() {
   return data.results;
 }
 
-export async function fetchMoviesById(movieId) {
-  const { data } = await axios.get(`/movie/${movieId}?language=en-US`, options);
+export async function fetchMoviesById(moviesId) {
+  const { data } = await axios.get(
+    `/movie/${moviesId}?language=en-US`,
+    options
+  );
   return data;
+}
+
+export async function fetchMoviesCast(moviesId) {
+  const { data } = await axios.get(
+    `/movie/${moviesId}/credits?language=en-US`,
+    options
+  );
+  return data.cast;
+}
+export async function fetchMoviesReviews(moviesId) {
+  const { data } = await axios.get(
+    `/movie/${moviesId}/reviews?language=en-US`,
+    options
+  );
+  return data.results;
+}
+
+export async function fetchSearchMovie(query) {
+  const { data } = await axios.get(`search/movie?${query}`, options);
+  return data.query;
 }

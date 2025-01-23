@@ -1,4 +1,8 @@
 .titleHomePage {
-    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
