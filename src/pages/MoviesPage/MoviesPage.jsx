@@ -48,6 +48,7 @@ export default function MoviesPage() {
         {({ handleChange, values }) => (
           <Form className={clsx(s.forma)}>
             <Field
+              placeholder="Search movies"
               className={clsx(s.inputSearchBar)}
               name="query"
               value={values.query}
@@ -56,9 +57,6 @@ export default function MoviesPage() {
                 handleChangeQuery(e.target.value);
               }}
             />
-            <button className={clsx(s.btnSearchBar)} type="submit">
-              Search...
-            </button>
           </Form>
         )}
       </Formik>
